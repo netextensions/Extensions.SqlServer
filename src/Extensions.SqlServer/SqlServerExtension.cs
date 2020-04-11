@@ -8,6 +8,7 @@ namespace NetExtensions
     {
         public static IServiceCollection AddSqlServerDb<TContext>(this IServiceCollection services, string connectionString) where TContext : DbContext, new()
         {
+            services.AddDbContext<TContext>(c => c.UseSqlServer(connectionString));
             var options = new DbContextOptionsBuilder<TContext>()
                 .UseSqlServer(connectionString)
                 .Options;

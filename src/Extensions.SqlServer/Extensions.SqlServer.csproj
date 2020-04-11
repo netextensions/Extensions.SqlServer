@@ -10,7 +10,7 @@
     <RepositoryUrl>https://github.com/netextensions/Extensions.SqlServer</RepositoryUrl>
     <PackageTags>Extensions.SqlServer,.net core</PackageTags>
     <PackageId>NetExtensions.Extensions.SqlServer</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.0.1</PackageVersion>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <Authors>netextensions.io</Authors>
     <PackageIcon>icon.png</PackageIcon>
