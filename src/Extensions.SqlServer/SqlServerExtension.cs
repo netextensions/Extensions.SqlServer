@@ -6,7 +6,7 @@ namespace NetExtensions
 {
     public static class SqlServerExtension
     {
-        public static IServiceCollection AddSqlServerDb<TContext>(this IServiceCollection services, string connectionString) where TContext : DbContext, new()
+        public static IServiceCollection AddSqlServerDb<TContext>(this IServiceCollection services, string connectionString) where TContext : DbContext
         {
             services.AddDbContext<TContext>(c => c.UseSqlServer(connectionString));
             var options = new DbContextOptionsBuilder<TContext>()
@@ -19,7 +19,7 @@ namespace NetExtensions
             return services;
         }
 
-        private static TContext CreateContext<TContext>(DbContextOptions<TContext> options) where TContext : DbContext, new() => (TContext)Activator.CreateInstance(typeof(TContext), options);
+        private static TContext CreateContext<TContext>(DbContextOptions<TContext> options) where TContext : DbContext => (TContext)Activator.CreateInstance(typeof(TContext), options);
 
     }
 }
